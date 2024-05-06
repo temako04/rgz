@@ -6,28 +6,49 @@
     <title>Название вашей компании - О компании</title>
     <link rel="stylesheet" href="main.css">
     <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
         .mts-info {
-            background-color: rgb(190, 182, 182); /* Серый фон */
+            background-color: rgb(243, 244, 247);
             padding: 20px;
-            border-radius: 10px; /* Создаем скругленные углы */
-            color: #333; /* Цвет текста */
-            margin-top: 20px; /* Отступ сверху */
+            border-radius: 25px;
+            color: #333;
+            margin-top: 20px;
         }
 
         .mts-info h2 {
-            font-size: 24px; /* Размер заголовка */
+            font-size: 24px;
+            text-align: center;
         }
 
-        /* Стили для маленьких блоков информации */
         .small-info {
-            background-color: rgb(242, 243, 247); /* Цвет фона блока с маленькой информацией */
-            padding: 10px;
+            background-color: rgb(243, 244, 247);
+            padding: 8px;
             margin-bottom: 10px;
-            border-radius: 5px; /* Создаем скругленные углы */
-            width: calc(33.33% - 20px); /* Ширина блока с учетом отступов */
-            float: left; /* Выравнивание блоков по горизонтали */
-            margin-right: 20px; /* Отступ между блоками */
-            margin-top: 20px; /* Отступ сверху */
+            border-radius: 25px;
+            width: calc(33.33% - 20px);
+            float: left;
+            margin-right: 20px;
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 20px;
+            text-align: center;
+        }
+        .gray-background {
+            background-color: rgb(231, 231, 231);
+            width: 100%;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -1;
         }
     </style>
 </head>
@@ -35,7 +56,6 @@
     <header>
 
         <div id="menu">
-            <!-- Сдвигаем меню вправо -->
             <img src="logo-mts-bank-red.png" style="padding: 5px;" width="120px">
             <a href="about.html" class="current-page">О компании</a>
             <a href="news.html">Новости</a>
@@ -46,16 +66,18 @@
     </header>
 
     <main>
-        <div style="background-color: rgb(255, 255, 255); height: 200px; margin-top: 40px;"></div>
+        <div style="background-color: rgb(255, 255, 255); height: 660px; margin-top: 40px;">
+            <img src="mts.png" style="padding: 180px; display: block; margin: 0 auto;" width="1350px">
+        </div>
+
+        <div class="gray-background"></div>
 
         <div class="content">
-            <!-- Серый блок для информации о МТС банке -->
             <div class="mts-info">
-                <h2>МТС Банк (ПАО «МТС-Банк»)</h2>
-                <p>Универсальный коммерческий банк, основанный в 1993 году. Действует на основании Генеральной лицензии №2268, выданной Банком России 17.12.2014 г. Входит в число 30 ведущих банков России по величине активов. Основным акционером является ПАО «Мобильные ТелеСистемы».</p>
+                <h2 ><b>МТС Банк (ПАО «МТС-Банк»)</b></h2>
+                <p style="text-align: center;"><i>Универсальный</i> коммерческий банк, основанный в 1993 году. Действует на основании Генеральной лицензии №2268, выданной Банком России 17.12.2014 г. Входит в число 30 ведущих банков России по величине активов. Основным акционером является ПАО «Мобильные ТелеСистемы».</p>
             </div>
 
-            <!-- Маленькие блоки с информацией -->
             <div class="small-info">
                 <h2>Топ-30 российских банков</h2>
             </div>
