@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Название вашей компании - О компании</title>
+    <link rel="stylesheet" href="main.css">
+    <style>
+        .mts-info {
+            background-color: rgb(190, 182, 182); /* Серый фон */
+            padding: 20px;
+            border-radius: 10px; /* Создаем скругленные углы */
+            color: #333; /* Цвет текста */
+            margin-top: 20px; /* Отступ сверху */
+        }
+
+        .mts-info h2 {
+            font-size: 24px; /* Размер заголовка */
+        }
+
+        /* Стили для маленьких блоков информации */
+        .small-info {
+            background-color: rgb(242, 243, 247); /* Цвет фона блока с маленькой информацией */
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px; /* Создаем скругленные углы */
+            width: calc(33.33% - 20px); /* Ширина блока с учетом отступов */
+            float: left; /* Выравнивание блоков по горизонтали */
+            margin-right: 20px; /* Отступ между блоками */
+            margin-top: 20px; /* Отступ сверху */
+        }
+    </style>
+</head>
+<body>
+    <header>
+
+        <div id="menu">
+            <!-- Сдвигаем меню вправо -->
+            <img src="logo-mts-bank-red.png" style="padding: 5px;" width="120px">
+            <a href="about.html" class="current-page">О компании</a>
+            <a href="news.html">Новости</a>
+            <a href="currency.html">Курс валют</a>
+            <a href="contacts.html">Контактные данные</a>
+            <a href="video.html">Видео</a>
+        </div>
+    </header>
+
+    <main>
+        <div style="background-color: rgb(255, 255, 255); height: 200px; margin-top: 40px;"></div>
+
+        <div class="content">
+            <!-- Серый блок для информации о МТС банке -->
+            <div class="mts-info">
+                <h2>МТС Банк (ПАО «МТС-Банк»)</h2>
+                <p>Универсальный коммерческий банк, основанный в 1993 году. Действует на основании Генеральной лицензии №2268, выданной Банком России 17.12.2014 г. Входит в число 30 ведущих банков России по величине активов. Основным акционером является ПАО «Мобильные ТелеСистемы».</p>
+            </div>
+
+            <!-- Маленькие блоки с информацией -->
+            <div class="small-info">
+                <h2>Топ-30 российских банков</h2>
+            </div>
+            <div class="small-info">
+                <h2>31 год на рынке</h2>
+            </div>
+            <div class="small-info">
+                <h2>3,8 миллиона активных клиентов</h2>
+            </div>
+            <div class="small-info">
+                <h2>10,07% норматив достаточности капитала</h2>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        &copy; Конкин Артём, ФБИ-23, 2 курс, 2024
+    </footer>
+</body>
+</html>
