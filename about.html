@@ -22,8 +22,9 @@
         }
 
         .mts-info h2 {
-            font-size: 24px;
+            font-size: 30px;
             text-align: center;
+            color: black;
         }
 
         .small-info {
@@ -50,11 +51,54 @@
             left: 0;
             z-index: -1;
         }
+        .red {
+            color: red;
+        }
+        .uslugi {
+            background-color: rgb(243, 244, 247);
+            padding: 30px;
+            border-radius: 25px;
+            color: #333;
+            margin-top: 40px;
+            text-align: center;
+        }
+        .service-item1::before {
+            content: '●';
+            color: red;
+            margin-right: 5px;
+        }
+        .service-items {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            text-align: justify;
+        }
+        .service-item {
+            width: calc(30% - 20px);
+            margin-bottom: 10px;
+            display: block;
+            text-align: left;
+            margin:30px;
+            font-size: 30px;
+        }
+        .service-category {
+            display: block;
+            text-align: left;
+        }
+        .service-item1 {
+            margin:20px;
+            text-align: center;
+            margin-bottom: 10px;
+            display: block;
+            text-align: left;
+            margin:70px;
+            font-size: 25px;
+        }
+        
     </style>
 </head>
 <body>
     <header>
-
         <div id="menu">
             <img src="logo-mts-bank-red.png" style="padding: 5px;" width="120px">
             <a href="about.html" class="current-page">О компании</a>
@@ -66,33 +110,58 @@
     </header>
 
     <main>
-        <div style="background-color: rgb(255, 255, 255); height: 660px; margin-top: 40px;">
-            <img src="mts.png" style="padding: 180px; display: block; margin: 0 auto;" width="1350px">
+        <div style="background-color: rgb(255, 255, 255); height: 800px; margin-top: 40px;">
+            <img src="mts.png" style="padding: 310px; display: block; margin: 0 auto;" width="1350px">
         </div>
 
         <div class="gray-background"></div>
 
         <div class="content">
             <div class="mts-info">
-                <h2 ><b>МТС Банк (ПАО «МТС-Банк»)</b></h2>
-                <p style="text-align: center;"><i>Универсальный</i> коммерческий банк, основанный в 1993 году. Действует на основании Генеральной лицензии №2268, выданной Банком России 17.12.2014 г. Входит в число 30 ведущих банков России по величине активов. Основным акционером является ПАО «Мобильные ТелеСистемы».</p>
+                <h2 ><b><span class="red">МТС Банк</span> (ПАО «МТС-Банк»)</b></h2>
+                <p style="text-align: center;"><i>Универсальный</i> коммерческий банк, основанный в 1993 году. Действует на основании <u>Генеральной лицензии №2268</u>,
+                выданной Банком России 17.12.2014 г. Входит в число 30 ведущих банков России по величине активов. Основным акционером является ПАО «Мобильные ТелеСистемы».</p>
             </div>
 
             <div class="small-info">
-                <h2>Топ-30 российских банков</h2>
+                <h2>Топ-<span class="red">30</span> российских банков</h2>
             </div>
             <div class="small-info">
-                <h2>31 год на рынке</h2>
+                <h2><span class="red">31</span> год на рынке</h2>
             </div>
             <div class="small-info">
-                <h2>3,8 миллиона активных клиентов</h2>
+                <h2><span class="red">3,8</span> миллиона активных клиентов</h2>
             </div>
             <div class="small-info">
-                <h2>10,07% норматив достаточности капитала</h2>
+                <h2><span class="red">10,07%</span> норматив достаточности капитала</h2>
+            </div>
+
+            <div class="uslugi">
+                <h2>Услуги банка</h2>
+                <div class="service-items">
+                    <div class="service-item">
+                        <div class="service-category"><b>Услуги для частных клиентов:</b></div>
+                        <div class="service-item1"><a href="https://www.mtsbank.ru/chastnim-licam/karti/">Карты</a></div>
+                        <div class="service-item1"><a href="https://www.mtsbank.ru/chastnim-licam/vkladi/">Вклады и счета</a></div>
+                        <div class="service-item1"><a href="https://www.mtsbank.ru/chastnim-licam/krediti/">Кредиты</a></div>
+                        <div class="service-item1"><a href="https://www.mtsbank.ru/chastnim-licam/ipoteka/">Ипотека</a></div>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-category"><b>Услуги для малого бизнеса:</b></div>
+                        <div class="service-item1"><a href="https://www.mtsbank.ru/malomu-biznesu/bankovski-depozit/">Депозиты</a></div>
+                        <div class="service-item1"><a href="https://www.mtsbank.ru/malomu-biznesu/acquiring/">Эквайринг</a></div>
+                        <div class="service-item1"><a href="https://www.mtsbank.ru/malomu-biznesu/investicionnie-uslugi/">ВЭД</a></div>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-category"><b>Услуги для корпоративных клиентов:</b></div>
+                        <div class="service-item1"><a href="https://www.mtsbank.ru/korporativnim-klientam/uchastnikam-ved/">ВЭД</a></div>
+                        <div class="service-item1"><a href="https://www.mtsbank.ru/korporativnim-klientam/faktoring/">Факторинг</a></div>
+                        <div class="service-item1"><a href="https://www.mtsbank.ru/korporativnim-klientam/finansirovanie/">Финансирование</a></div>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
-
     <footer>
         &copy; Конкин Артём, ФБИ-23, 2 курс, 2024
     </footer>
