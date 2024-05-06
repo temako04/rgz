@@ -1,35 +1,36 @@
-/* Стили для меню */
 #menu {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    background-color: rgb(231, 231, 231); /* Серый цвет меню */
+    background-color: rgb(231, 231, 231);
     color: #333;
     padding: 10px;
     z-index: 1000;
-    border-bottom: 1px solid #999; /* Серая линия под меню */
+    border-bottom: 1px solid #999;
 }
 
 #menu a {
-    color: #333; /* Цвет ссылок */
+    color: #333;
     text-decoration: none;
     margin-right: 20px;
 }
 
 #menu a:hover {
-    color: red; /* Цвет при наведении */
+    color: red;
 }
 
 .current-page {
-    color: red; /* Цвет текущей страницы */
+    color: red;
 }
 
-/* Стили для содержимого страниц */
 .content {
     padding: 20px;
-    margin-top: 50px; /* Отступ для меню */
+    margin-top: 50px;
     background-color: rgb(231, 231, 231);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 main {
@@ -38,8 +39,8 @@ main {
 }
 
 footer {
-    background-color: rgb(190, 182, 182); /* Серый фон footer */
-    color: #333; /* Цвет текста */
+    background-color: rgb(190, 182, 182);
+    color: #333;
     font-family: 'Times New Roman', Times, serif;
     padding: 5px;
     font-size: 20px;
@@ -47,12 +48,12 @@ footer {
     bottom: 0;
     right: 0;
     left: 0;
-    border-top: 1px solid #999; /* Серая линия над footer */
+    border-top: 1px solid #999;
 }
 
 header {
-    background-color: rgb(190, 182, 182); /* Серый цвет header */
-    color: #333; /* Цвет текста */
+    background-color: rgb(190, 182, 182);
+    color: #333;
     font-family: 'Times New Roman', Times, serif;
     font-size: 20px;
 }
