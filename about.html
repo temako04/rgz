@@ -6,19 +6,46 @@
     <title>Название вашей компании - О компании</title>
     <link rel="stylesheet" href="main.css">
     <style>
+        .content {
+        padding: 20px;
+        margin-top: 50px; /* Отступ для меню */
+        background-color: rgb(231, 231, 231);
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100%;
+        height: 200vh;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        }
+        .whitecontent {
+            padding: 0px;
+            margin-top: 100px;
+            background-color: rgb(255, 255, 255);
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
         body {
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            margin: 0;
+            margin: 0px;
         }
         .mts-info {
             background-color: rgb(243, 244, 247);
-            padding: 20px;
+            padding: 25px;
             border-radius: 25px;
             color: #333;
             margin-top: 20px;
+            margin: auto;
+            width: 90%;
         }
 
         .mts-info h2 {
@@ -29,37 +56,29 @@
 
         .small-info {
             background-color: rgb(243, 244, 247);
-            padding: 8px;
+            padding: 5px;
             margin-bottom: 10px;
             border-radius: 25px;
             width: calc(33.33% - 20px);
             float: left;
             margin-right: 20px;
             margin-top: 20px;
+            margin-bottom: 10px;
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
             margin-top: 20px;
             text-align: center;
         }
-        .gray-background {
-            background-color: rgb(231, 231, 231);
-            width: 100%;
-            height: 100vh;
-            position: fixed;
-            top: 0;
-            left: 0;
-            z-index: -1;
-        }
         .red {
             color: red;
         }
         .uslugi {
             background-color: rgb(243, 244, 247);
-            padding: 30px;
+            padding: 10px;
             border-radius: 25px;
             color: #333;
-            margin-top: 40px;
+            margin-top: 10px;
             text-align: center;
         }
         .service-item1::before {
@@ -74,7 +93,8 @@
             text-align: justify;
         }
         .service-item {
-            width: calc(30% - 20px);
+            width: calc(30% - 60px);
+            height: 1px;
             margin-bottom: 10px;
             display: block;
             text-align: left;
@@ -91,10 +111,13 @@
             margin-bottom: 10px;
             display: block;
             text-align: left;
-            margin:70px;
+            margin:30px;
             font-size: 25px;
         }
-        
+        .mts-image {
+            max-width: 50%; /* Чтобы изображение не выходило за пределы контейнера */
+            max-height: 30%; /* Чтобы изображение не выходило за пределы контейнера */
+        }
     </style>
 </head>
 <body>
@@ -110,11 +133,9 @@
     </header>
 
     <main>
-        <div style="background-color: rgb(255, 255, 255); height: 800px; margin-top: 40px;">
-            <img src="mts.png" style="padding: 310px; display: block; margin: 0 auto;" width="1350px">
+        <div class="whitecontent">
+            <img src="mts.png" class="mts-image" alt="МТС Банк">
         </div>
-
-        <div class="gray-background"></div>
 
         <div class="content">
             <div class="mts-info">
