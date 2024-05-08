@@ -12,9 +12,10 @@
             border-radius: 5px;
             padding: 15px;
             margin-bottom: 15px;
+            position: relative;
         }
         .show-button, .hide-button {
-            background-color: #007bff;
+            background-color: #ff0000;
             color: white;
             border: none;
             padding: 8px 12px;
@@ -26,7 +27,13 @@
             display: none;
             margin-top: 10px;
         }
-    </style>
+        .news-logo {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 280px;
+            padding: 20px;
+        }
     </style>
     <script>
          function showFullNews(newsNumber) {
@@ -54,12 +61,17 @@
 
     <main>
         <div class="news-card">
-            <h3>1 мая 2024</h3>
-            <h2>Заголовок новости 1</h2>
-            <p>Первые несколько строк новости 1...</p>
+            <h3>06 мая 2024</h3>
+            <img src="logo-mts-bank-red.png" alt="МТС Банк логотип" class="news-logo">
+            <h2>МТС Банк опубликует результаты первого квартала 2024 года по МСФО 27 мая</h2>
+            <p>Москва, РФ — ПАО «МТС-Банк» (MOEX: MBNK) объявит о финансовых результатах
+            за первый квартал 2024 года по международным стандартам финансовой отчетности</p>
             <button class="show-button" onclick="showFullNews(1)">Показать</button>
             <button class="hide-button" onclick="hideFullNews(1)">Скрыть</button>
-            <p class="full-news" id="fullNews1">Полная новость 1</p>
+            <p class="full-news" id="fullNews1">Москва, РФ — ПАО «МТС-Банк» (MOEX: MBNK) объявит о финансовых результатах за первый квартал 2024 года по международным стандартам финансовой отчетности 27 мая 2024 года.
+            Материалы будут опубликованы в 13:00 (время московское) в разделе Новости корпоративного сайта mtsbank.ru.
+            Менеджмент проведет конференц-звонок по результатам за первый квартал 2024 года для инвесторов и аналитиков в тот же день 27 мая 2024 года, о времени звонка банк сообщит дополнительно.
+            Акционерам, инвесторам и иным участникам рынка, желающим задать вопрос или обсудить материалы, предлагается обращаться в МТС Банк:</p>
         </div>
         
         <div class="news-card">
@@ -69,6 +81,78 @@
             <button class="show-button" onclick="showFullNews(2)">Показать</button>
             <button class="hide-button" onclick="hideFullNews(2)">Скрыть</button>
             <p class="full-news" id="fullNews2">Полная новость 2</p>
+        </div>
+
+        <div class="news-card">
+            <h3>3 мая 2024</h3>
+            <h2>Заголовок новости 3</h2>
+            <p>Первые несколько строк новости 3...</p>
+            <button class="show-button" onclick="showFullNews(3)">Показать</button>
+            <button class="hide-button" onclick="hideFullNews(3)">Скрыть</button>
+            <p class="full-news" id="fullNews3">Полная новость 3</p>
+        </div>
+
+        <div class="news-card">
+            <h3>2 мая 2024</h3>
+            <h2>Заголовок новости 4</h2>
+            <p>Первые несколько строк новости 4...</p>
+            <button class="show-button" onclick="showFullNews(4)">Показать</button>
+            <button class="hide-button" onclick="hideFullNews(4)">Скрыть</button>
+            <p class="full-news" id="fullNews4">Полная новость 4</p>
+        </div>
+
+        <div class="news-card">
+            <h3>2 мая 2024</h3>
+            <h2>Заголовок новости 5</h2>
+            <p>Первые несколько строк новости 5...</p>
+            <button class="show-button" onclick="showFullNews(5)">Показать</button>
+            <button class="hide-button" onclick="hideFullNews(5)">Скрыть</button>
+            <p class="full-news" id="fullNews5">Полная новость 5</p>
+        </div>
+
+        <div class="news-card">
+            <h3>2 мая 2024</h3>
+            <h2>Заголовок новости 6</h2>
+            <p>Первые несколько строк новости 6...</p>
+            <button class="show-button" onclick="showFullNews(6)">Показать</button>
+            <button class="hide-button" onclick="hideFullNews(6)">Скрыть</button>
+            <p class="full-news" id="fullNews6">Полная новость 6</p>
+        </div>
+
+        <div class="news-card">
+            <h3>2 мая 2024</h3>
+            <h2>Заголовок новости 7</h2>
+            <p>Первые несколько строк новости 7...</p>
+            <button class="show-button" onclick="showFullNews(7)">Показать</button>
+            <button class="hide-button" onclick="hideFullNews(7)">Скрыть</button>
+            <p class="full-news" id="fullNews7">Полная новость 7</p>
+        </div>
+
+        <div class="news-card">
+            <h3>2 мая 2024</h3>
+            <h2>Заголовок новости 8</h2>
+            <p>Первые несколько строк новости 8...</p>
+            <button class="show-button" onclick="showFullNews(8)">Показать</button>
+            <button class="hide-button" onclick="hideFullNews(8)">Скрыть</button>
+            <p class="full-news" id="fullNews8">Полная новость 8</p>
+        </div>
+
+        <div class="news-card">
+            <h3>2 мая 2024</h3>
+            <h2>Заголовок новости 9</h2>
+            <p>Первые несколько строк новости 9...</p>
+            <button class="show-button" onclick="showFullNews(9)">Показать</button>
+            <button class="hide-button" onclick="hideFullNews(9)">Скрыть</button>
+            <p class="full-news" id="fullNews9">Полная новость 9</p>
+        </div>
+
+        <div class="news-card">
+            <h3>2 мая 2024</h3>
+            <h2>Заголовок новости 10</h2>
+            <p>Первые несколько строк новости 10...</p>
+            <button class="show-button" onclick="showFullNews(10)">Показать</button>
+            <button class="hide-button" onclick="hideFullNews(10)">Скрыть</button>
+            <p class="full-news" id="fullNews10">Полная новость 10</p>
         </div>
     </main>
     <footer>
