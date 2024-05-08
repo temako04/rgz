@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>МТС Банк - Конкин Артём</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="shortcut icon" href="mts-ico2.png" type="image/x-icon">
+</head>
+<script>
+    let chfRate = 0;
+
+    async function getCurrencyRates() {
+        const response = await fetch('https://www.cbr-xml-daily.ru/daily_json.js');
+        const data = await response.json();
+        if (data.Valute.CHF) {
+            chfRate = data.Valute.CHF.Value / data.Valute.CHF.Nominal;
+            document.querySelectorAll('option[value="CHF"]').forEach(opt => opt.value = chfRate.toFixed(4));
+        }
+    }
+
+    function convertCurrency() {
+        const amount = parseFloat(document.getElementById('amount').value);
+        const fromCurrency = parseFloat(document.getElementById('fromCurrency').value);
+        const toCurrency = parseFloat(document.getElementById('toCurrency').value);
+        const result = (amount * fromCurrency) / toCurrency;
+        document.getElementById('result').textContent = result.toFixed(2) + (toCurrency === 1 ? ' RUB' : ' CHF');
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        getCurrencyRates();
+        document.getElementById('convertButton').addEventListener('click', convertCurrency);
+    });
+
+</script>
+<style>
+    .converter {
+        width: 450px;
+        padding: 20px;
+        margin: 20px auto;
+        border: 5px solid #ff0000;
+        box-shadow: 2px 5px 7px rgb(27, 27, 27);
+        border-radius: 20px;
+        font-size: 25px;
+        text-align: center;
+    }
+    label, select, input, button { 
+        margin-top: 20px; 
+        display: block; 
+    }
+    input, select, button {
+        width: 100%; 
+        font-size: 15px;
+        text-align: center;
+    }
+</style>
+<body>
+    <header>
+        <div id="menu">
+            <img src="logo-mts-bank-red.png" style="padding: 5px;" width="120px">
+            <a href="about.html">О компании</a>
+            <a href="news.html">Новости</a>
+            <a href="currency.html" class="current-page">Курс валют</a>
+            <a href="contacts.html">Контактные данные</a>
+            <a href="video.html">Видео</a>
+        </div>
+    </header>
+
+    <main>
+        <h1>Курс валют</h1>
+        <div class="converter">
+            <label for="amount">Сумма:</label>
+            <input type="number" id="amount" value="1">
+            <label for="fromCurrency">Из валюты:</label>
+            <select id="fromCurrency">
+                <option value="1">Рубль (RUB)</option>
+                <option value="CHF">Швейцарский франк (CHF)</option>
+            </select>
+            <label for="toCurrency">В валюту:</label>
+            <select id="toCurrency">
+                <option value="CHF">Швейцарский франк (CHF)</option>
+                <option value="1">Рубль (RUB)</option>
+            </select>
+            <button id="convertButton" onclick="convertCurrency()">Конвертировать</button>
+            <h3>Результат: <span id="result"></span></h3>
+        </div>
+        </div>
+    </main>
+    <footer>
+        &copy; Конкин Артём, ФБИ-23, 2 курс, 2024
+    </footer>
+</body>
+</html
