@@ -7,7 +7,7 @@
     color: #333;
     padding: 10px;
     z-index: 1000;
-    border-bottom: 3px solid #999; /* Серая линия под меню */
+    border-bottom: 3px solid #999;
 }
 
 #menu a {
@@ -48,4 +48,8 @@ header {
     color: #333;
     font-family: 'Times New Roman', Times, serif;
     font-size: 20px;
+    margin-top:65px;
+}
+h2 {
+    text-shadow:2px 2px 4px rgba(0, 0, 0, 0.5) ;
 }

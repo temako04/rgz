@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Название вашей компании - О компании</title>
+    <link rel="stylesheet" href="main.css">
+    <style>
+        .news-card {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 15px;
+        }
+
+        .show-button, .hide-button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .full-news {
+            display: none;
+            margin-top: 10px;
+        }
+    </style>
+    </style>
+    <script>
+         function showFullNews(newsNumber) {
+            let fullNewsElement = document.getElementById('fullNews' + newsNumber);
+            fullNewsElement.style.display = 'block';
+        }
+
+        function hideFullNews(newsNumber) {
+            let fullNewsElement = document.getElementById('fullNews' + newsNumber);
+            fullNewsElement.style.display = 'none';
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div id="menu">
+            <img src="logo-mts-bank-red.png" style="padding: 5px;" width="120px">
+            <a href="about.html">О компании</a>
+            <a href="news.html" class="current-page">Новости</a>
+            <a href="currency.html">Курс валют</a>
+            <a href="contacts.html">Контактные данные</a>
+            <a href="video.html">Видео</a>
+        </div>
+    </header>
+
+    <main>
+        <div class="news-card">
+            <h3>1 мая 2024</h3>
+            <h2>Заголовок новости 1</h2>
+            <p>Первые несколько строк новости 1...</p>
+            <button class="show-button" onclick="showFullNews(1)">Показать</button>
+            <button class="hide-button" onclick="hideFullNews(1)">Скрыть</button>
+            <p class="full-news" id="fullNews1">Полная новость 1</p>
+        </div>
+        
+        <div class="news-card">
+            <h3>2 мая 2024</h3>
+            <h2>Заголовок новости 2</h2>
+            <p>Первые несколько строк новости 2...</p>
+            <button class="show-button" onclick="showFullNews(2)">Показать</button>
+            <button class="hide-button" onclick="hideFullNews(2)">Скрыть</button>
+            <p class="full-news" id="fullNews2">Полная новость 2</p>
+        </div>
+    </main>
+    <footer>
+        &copy; Конкин Артём, ФБИ-23, 2 курс, 2024
+    </footer>
+</body>
+</html>
