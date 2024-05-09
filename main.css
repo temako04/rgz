@@ -2,26 +2,27 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 99%;
     background-color: rgb(231, 231, 231);
     color: #333;
     padding: 10px;
     z-index: 1000;
     border-bottom: 3px solid #999;
+    overflow-x: hidden;
 }
 
 #menu a {
-    color: #333; /* Цвет ссылок */
+    color: #333;
     text-decoration: none;
     margin-right: 20px;
 }
 
 #menu a:hover {
-    color: red; /* Цвет при наведении */
+    color: red;
 }
 
 .current-page {
-    color: red; /* Цвет текущей страницы */
+    color: red;
 }
 
 
@@ -31,7 +32,7 @@ main {
 }
 
 footer {
-    background-color: rgb(190, 182, 182); /* Серый фон footer */
+    background-color: rgb(190, 182, 182);
     color: #333;
     font-family: 'Times New Roman', Times, serif;
     padding: 5px;
