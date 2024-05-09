@@ -35,23 +35,33 @@
 </script>
 <style>
     .converter {
-        width: 450px;
+        width: 350px;
         padding: 20px;
         margin: 20px auto;
         border: 5px solid #ff0000;
         box-shadow: 2px 5px 7px rgb(27, 27, 27);
         border-radius: 20px;
         font-size: 25px;
-        text-align: center;
+        text-align: left;
     }
     label, select, input, button { 
         margin-top: 20px; 
         display: block; 
     }
     input, select, button {
-        width: 100%; 
+        width: 70%; 
         font-size: 15px;
-        text-align: center;
+        text-align: left;
+    }
+    button {
+        color: red;
+    }
+    .news-logo {
+        position: absolute;
+        width: 100px;
+        top: 170px;
+        right: 860px;
+        padding: 20px;
     }
 </style>
 <body>
@@ -69,20 +79,21 @@
     <main>
         <h1>Курс валют</h1>
         <div class="converter">
-            <label for="amount">Сумма:</label>
+            <img src="logo-mts-bank-red.png" alt="МТС Банк логотип" class="news-logo">
+            <label for="amount">Введите число:</label>
             <input type="number" id="amount" value="1">
-            <label for="fromCurrency">Из валюты:</label>
+            <label for="fromCurrency">Из какой валюты вы хотите:</label>
             <select id="fromCurrency">
                 <option value="1">Рубль (RUB)</option>
                 <option value="CHF">Швейцарский франк (CHF)</option>
             </select>
-            <label for="toCurrency">В валюту:</label>
+            <label for="toCurrency">В какую валюту вы хотите:</label>
             <select id="toCurrency">
                 <option value="CHF">Швейцарский франк (CHF)</option>
                 <option value="1">Рубль (RUB)</option>
             </select>
-            <button id="convertButton" onclick="convertCurrency()">Конвертировать</button>
-            <h3>Результат: <span id="result"></span></h3>
+            <button id="convertButton" onclick="convertCurrency()">Конвертация</button>
+            <h3>Вывод: <span id="result"></span></h3>
         </div>
         </div>
     </main>
